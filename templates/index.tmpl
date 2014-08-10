@@ -1,0 +1,19 @@
+#from _layout import layout
+#extends layout
+#def title
+{{ .Title }}
+#end def
+#def favicon
+/static/favicon.ico#end def
+#def css
+#include raw ".min/css/index.css"
+#end def
+#def js
+#include raw ".min/js/index.min.js"
+#end def
+#def body
+    <h1>{{ .PageHeader }}</h1>
+    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <p>If you'll look at page source you'll see it's well minified. Then go and look at <code>templates/index.tmpl</code></p>
+    <p>This page was created using Cheetah template engine.<br/> read in <code>templates/render.sh</code> to try Jinja2</p>
+#end def

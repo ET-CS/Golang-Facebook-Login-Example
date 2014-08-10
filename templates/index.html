@@ -1,0 +1,16 @@
+{% extends "_layout.html" %}
+
+{% block title %}{{ '{{ .Title }}' }}{% endblock %}
+{% block favicon %}/static/favicon.ico{% endblock %}
+{% block css %}{{ include_file('.min/css/index.css') }}{% endblock %}
+
+## this must be in one line because js is not minified, 
+## so no spaces should be inside the block
+{% block js %}{{ include_file('.min/js/index.min.js') }}{% endblock %}
+
+{% block body %}
+    <h1>{{ '{{ .PageHeader }}' }}</h1>
+    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+    <p>If you'll look at page source you'll see it's well minified. Then go and look at <code>templates/index.html</code></p>
+    <p>This page was created using Jinja2 template engine.<br/> read in <code>templates/render.sh</code> to try Cheetah</p>
+{% endblock %}
